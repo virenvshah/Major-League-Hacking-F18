@@ -1,0 +1,10 @@
+F S UID        PID  PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+0 S virsain   7128  6554  9  80   0 - 275322 wait  01:04 pts/11   00:00:01 /usr/bin/python3 ./speech_to_braille.py
+0 S virsain   7136  7128  0  80   0 -  8145 pipe_w 01:04 pts/11   00:00:00 /usr/bin/python3 -c from multiprocessing.semaphore_tracker import main;main(3)
+0 Z virsain   7141  7128 11  80   0 -     0 -      01:04 pts/11   00:00:01 [keyword_match.p] <defunct>
+0 R virsain   7173  7128 22  80   0 - 179663 -     01:04 pts/11   00:00:01 /usr/bin/python3 ./keyword_match.py stop recording
+0 S virsain   7174  7128  0  80   0 -  3138 wait   01:04 pts/11   00:00:00 /bin/bash ./speech.sh 0 recording.wav
+0 S virsain   7175  7174  0  80   0 - 68869 poll_s 01:04 pts/11   00:00:00 arecord -d 0 recording.wav
+0 S virsain   7184  7173  0  80   0 -  8172 pipe_w 01:04 pts/11   00:00:00 /usr/bin/python3 -c from multiprocessing.semaphore_tracker import main;main(3)
+0 S virsain   7191  7173  0  80   0 -  3137 wait   01:04 pts/11   00:00:00 /bin/bash ./end_keyword.sh
+4 R virsain   7192  7191  0  80   0 -  9342 -      01:04 pts/11   00:00:00 ps -allf
